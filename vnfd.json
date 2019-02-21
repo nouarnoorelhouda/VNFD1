@@ -1,0 +1,89 @@
+{	"name": "vnf1",
+	"vendor": "nour",
+	"version": "1.0",
+	"lifecycle_event": 
+	[
+		
+	],
+
+	"configurations": 
+	{"name": "vnf-configuration",
+		"configurationParameters": 
+		[
+			{
+				"confKey": "PublishAllPorts",
+				"value": "8863"
+			}
+		]
+	},
+
+
+
+	"vdu": 
+	[
+		{
+			"vm_image":
+			[
+			],
+
+			"vimInstanceName": 
+			[
+				"edge0"
+			],
+
+			"scale_in_out": 2,
+				"virtual_link": 
+	[
+	{
+      "name":"vl1",
+      "id":"vl1" },
+      
+      {
+       "name":"vl2",
+       "id":"vl2"      },
+      {
+       "name":"vl3",
+       "id":"vl3"
+            }
+	],
+			"vnfc":
+			[
+				{
+					"connection_point": 
+					[
+						{
+	  "connection_point_id":"CP11",
+	  "name":"CP11",
+	  "virtual_link_reference":"vl1"
+	  
+	},
+	{
+	  "connection_point_id":"CP12",
+	  "name":"CP12",
+	  "virtual_link_reference":"vl2"
+	  
+	},
+	{
+	  "connection_point_id":"CP13",
+	  "name":"CP13",
+	  "virtual_link_reference":"vl3"
+
+	}
+					]
+				}
+			]
+		}
+		],
+	"deployment_flavour": 
+	[
+		{
+
+			"flavour_key": "m1.small"
+			
+		}
+	],
+
+
+	"type": "vnf1",
+	"endpoint": "docker"
+}

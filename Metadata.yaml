@@ -1,0 +1,20 @@
+name: vnf1
+description: "vnf test"
+provider: LAAS
+shared: true
+nfvo_version: 5.0.0
+image:
+    upload: false
+    names:
+        - noorroon/vnfsite1:latest
+    link: noorroon/vnfsite1:latest
+image-config:
+    name: noorroon/vnfsite1:latest
+    diskFormat: qcow2
+    containerFormat: bare
+    minCPU: 0
+    minDisk: 0
+    minRam: 0
+    isPublic: true
+vim_types:
+    - docker
